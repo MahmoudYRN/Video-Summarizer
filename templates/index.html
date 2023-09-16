@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Summarization</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <script src="{{ url_for('static', filename='css/javascript.js') }}"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="card" id="subtn">
+    <h3 id="video-heading">Upload Video</h3>
+    <div class="drop_box">
+      <header>
+        <h4>Select File here</h4>
+      </header>
+      <p>Files Supported: MP4, MOV</p>
+       <form method="post" enctype='multipart/form-data'>
+<!--           <input type="file" hidden accept=".mov,.mp4" id="fileID" style="display:none;">-->
+<!--           <button class="btn" action="fileID">Choose File</button>-->
+           <label class="custom-file-upload">
+               <input type="file" name="file" class="btn" accept=".mov,.mp4" id="fileID">
+               <p1>upload video</p1>
+           </label>
+           <input type="submit" onclick="myFunction()" class="btn"  placeholder="Summerize">
+       </form>
+    </div>
+  </div>
+    <span class="loader" id="loading"></span>
+</div>
+    <div class="load1" id="load1">
+        <h4>Summarizing Video....</h4>
+    </div>
+</body>
+</html>

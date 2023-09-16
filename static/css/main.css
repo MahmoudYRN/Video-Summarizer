@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #343541;
+}
+#video-heading{
+    text-align:center;
+}
+.video-container{
+    background-color: red;
+    height:300px;
+    width:auto;
+    margin-right:10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.video-container video{
+    height:300px;
+    width:auto;
+}
+.segments{
+    height:600px;
+    width:200px;
+    overflow:auto;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.segment{
+    height:90px;
+    width:180px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15px;
+}
+.segment img{
+    width:180px;
+    height:auto;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.transcript{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+    height:290px;
+    width:534px;
+    margin-left:396px;
+    margin-top:-290px;
+    padding: 10px;
+    overflow:auto
+}
+.container {
+  margin-top:100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container1 {
+  margin-top:20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 600px;
+  min-height: 260px;
+  background-color: #ffffff;
+  padding: 10px 30px 40px;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+
+}
+.download-vid {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  margin-left:auto;
+  margin-right:auto;
+  text-decoration:none;
+  width:744px;
+  text-align:center;
+  background-color: rgb(16 163 127);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.drop_box {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    text-decoration: none;
+    background-color: rgb(16 163 127);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.btn {
+  text-decoration: none;
+  background-color: rgb(16 163 127);
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #005af0;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.loader {
+    margin-top:150px;
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+  }
+
+#loading,#load1{
+  display:none;
+}
+.load1{
+    display:none;
+    color:white;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: #fff;
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: #ff3d00;
+    box-shadow: 30px 0 0 #fff;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #ff3d00;
+    }
+    50% {
+      box-shadow: 0 0 0 #ff3d00;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #ff3d00;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #fff;
+    }
+    50% {
+      box-shadow: 0 0 0 #fff;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #fff;
+      margin-top: 0;
+    }
+  }

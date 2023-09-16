@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summary</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+<div class="container1">
+    <div class="video-container">
+		<video controls>
+          <source src="../static/output/summerised_video.mp4" type="video/mp4">
+        </video>
+  	</div>
+	<div class="segments">
+		{% for image in images %}
+			<div class="segment"><img src="{{ url_for('static', filename='segments/' + image) }}" alt="Image"></div>
+		{% endfor %}
+	</div>
+</div>
+	<div class="transcript">
+		{% for line in subtitle_text.split('\n') %}
+		<p>{{ line }}</p>
+		{% endfor %}
+	</div><br>
+	<a href="static/output/summerised_video.mp4" download><div class="download-vid">Download</div></a>
+</body>
+</html>
